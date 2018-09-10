@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +15,9 @@
 
 Route::get('/', function () {
     return "<h1>FEC</h1>";
+});
+
+Route::get('/jugadores', function () {
+    $jugadores = DB::table('jugadores')->get();
+    return $jugadores;
 });
