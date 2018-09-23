@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +11,11 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-Route::get('/', function () {
-    return "<h1>FEC</h1>";
+Route::get('/jugadores', function () {
+    return view('listar_jugadores');
 });
 
-Route::get('/jugadores', function () {
-    $jugadores = DB::table('jugadores')->get();
-    return $jugadores;
+Route::get('/jugadores/{id}', function ($id) {
+    return view('detallar_jugador')->with(['jugador_id'=>$id]);
 });
+
