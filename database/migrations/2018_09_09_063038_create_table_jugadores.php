@@ -17,6 +17,7 @@ class CreateTableJugadores extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->integer('club_id');
+            $table->integer('avatar_id');
         });
     }
 
