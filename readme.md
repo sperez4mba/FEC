@@ -9,3 +9,5 @@ Para instalar:
 - Lanzar el backend con `php artisan serve`
 
 - Hacer build del frontend con `yarn run dev` o `npm run dev`
+
+- Las URLs disponibles son http://localhost:8000/jugadores y http://localhost:8000/jugadores/1
